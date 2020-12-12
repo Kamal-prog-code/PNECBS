@@ -19,6 +19,6 @@ services:
     action-server:
         image: rasa/rasa-sdk:1.10.2
         volumes:
-            - ./actions:/PNECBS/actions
+            - ./actions/actions.py:/PNECBS/actions/actions.py
         ports:
             - 5055:5055                        
