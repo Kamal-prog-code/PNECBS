@@ -6,9 +6,19 @@ services:
         command: python3 manage.py runserver 0.0.0.0:8000 
         ports:
             - 8000:8000
-    rasa_server:
-    	build: .
-        command: rasa run -m models --enable-api --cors "*" --debug 
+
+    rasa:
+        image: rasa/rasa:1.10.7-full
         ports:
-            - 5005:5005
-                    
+            - 5005:5005            
+        volumes:
+            - ./:/PNECBS
+        command:
+            - run
+
+    action-server:
+        image: rasa/rasa-sdk:1.10.2
+        ports:
+            - 5055:5055            
+        volumes:
+            - ./actions:/PNECBS/actions
