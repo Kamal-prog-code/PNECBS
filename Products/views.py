@@ -32,7 +32,7 @@ def contents(request,pk):
     overset = item.content_set.get(item_id=pk)
     context={'item':item,'overset':overset}
     return render(request,'content.html',context)    
-
+#Authentication
 def signup(request):
     if request.method == 'POST':
         fm = UserForm(request.POST)
