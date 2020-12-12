@@ -1,6 +1,11 @@
 version: '3'
 
 services:
+    web:
+        build: .
+        command: python3 manage.py runserver 0.0.0.0:8000 
+        ports:
+            - 8000:8000
     rasa:
         image: rasa/rasa:1.10.7-full
         ports:
