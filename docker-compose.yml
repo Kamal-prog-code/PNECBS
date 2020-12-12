@@ -18,9 +18,7 @@ services:
 
     action-server:
         image: rasa/rasa-sdk:1.10.2
-        ports:
-            - 5055:5055            
         volumes:
             - ./actions:/PNECBS/actions
-        entrypoint:
-            ls /root
+        ports:
+            - 5055:5055                        
