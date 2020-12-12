@@ -1,0 +1,68 @@
+{%  extends 'base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body background="{%static 'imgs/back.jpeg'%}" style="background-size: 100%;">
+    <div class="chat-popup" id="myForm" style="margin-top: 20px;margin-left: 35px;">
+        <div class="chat-container" style="height: 10px;width: max-content;"></div>
+        <!-- <a class="btn-block btn-info btn-primary" href="{%url 'home'%}" style="text-align:center;height: 40px;font-size: large;">HOME</a> -->
+
+        <script src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js"/></script>
+        <script type="text/javascript">
+            var chatroom = new window.Chatroom({
+                host: "http://localhost:5005",
+                title: "Chat with PriceNegotiator - {{overset.item.title}}",
+                container: document.querySelector(".chat-container"),
+                welcomeMessage: "Hi, I am PriceNegotiator. Are you happy with our {{overset.item.title}}?",
+                speechRecognition: "en-US",
+                voiceLang: "en-US"
+            });
+            chatroom.openChat();
+        </script>
+    </div>
+
+    <div class="card col-md-7 offset-md-3" id="concard" style="height: max-content;margin-left:550px;margin-top: 60px;margin-bottom: 200px;background-image: url(/static/imgs/back.jpg);">
+        <div class="card col-md-15" style="margin-top: 10px;margin-bottom: 10px;">
+            <p><u><center><b style="font-size: 25px;">{{overset.item.title}}</b></center></u></p>
+            <p><img src="{{overset.item.photo.url}}" style="width: 220px;height: 250px;">
+            <span style="margin-left:0100px ;">Offered Price : ₹ {{overset.cost}}</span>
+            <a class="btn btn-warning">Buy</a>
+            <button class="btn btn-danger neg_cls" onclick="toggleNav()" data-itemid="{{overset.item.id}}">Negotiate</button></p>
+            
+            <p><b style="font-size: 20px;">Description : </b><br>{{overset.description}}</p>
+        </div>
+    </div>
+    <script src="{%static 'js/base.js'%}"></script>
+    <script type="text/javascript">
+        var nav = true;
+
+        function toggleNav() {
+            // if (nav) {
+                document.getElementById("myForm").style.display = "block";
+            // } else {
+            //     document.getElementById("myForm").style.display = "none";
+            // }
+        }
+    
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        var csrftoken = getCookie('csrftoken');
+    </script>
+</body>
+{%endblock %}

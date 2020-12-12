@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}SignUP{% endblock %}
+
+{% block content %}
+<div style="background-image:repeating-linear-gradient(to left, rgb(248, 185, 185),rgb(188, 188, 221));height: 800px;">
+<div class="container" ><br>
+    <div class="card col-md-5 offset-md-3" style="margin-top: 5em;">
+        <h1 class="title">SignUP</h1>
+        <p>Please, use the following form to SignUP:</p>
+        <form method="POST">  
+            {% csrf_token %}  
+            {{ form.as_p }}  
+            <p><input type="submit" value="SignUP"></p>
+        </form>      
+    </div>  
+</div>
+</div>
+{% endblock %}  

@@ -1,0 +1,33 @@
+
+{% extends "base.html" %}
+{%block content%}
+<div class="jumbotron jumbotron-fluid" style="height : 15em;background-image: url('/static/imgs/couses.jpg');background-size: 100%;">
+<font color="white"><h1>Contact us</h1>
+<h5>If you have a question or complaint, please call us +918247707332(9:30am to 5:30pm. Monday to Saturday.)</h5>
+</font>
+</div>
+<div class = "container" style="float: left;margin-left: 10em;"> 
+    <div class="card col-md-6">
+        <form method="GET">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name"><br>
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name"><br>
+
+        <label for="email">Email</label>
+        <input  type="text" name="email" placeholder="email" ><br>
+
+        <label for="subject">subject</label>
+        <input type="text" id="sub" name="subject" placeholder="subject"><br><br>
+
+        <label for="Description">Description</label>
+        <textarea id="text" name="description" placeholder="describe..."></textarea>
+        <br><br>
+        <label for="myfile">Attach</label>
+        <input type="file" id="myfile" name="myfile" multiple><br><br>
+        <input type="submit" value="Submit">   
+        </form>
+    </div>
+</div>
+{%endblock%}

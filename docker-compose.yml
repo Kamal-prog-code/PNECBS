@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+    web:
+        build: .
+        command: python3 manage.py runserver 0.0.0.0:8000 
+        ports:
+            - 8000:8000
+    rasa_server:
+    	build: .
+        command: rasa run -m models --enable-api --cors "*" --debug 
+        ports:
+            - 5005:5005
+                    

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static%}
+{%block content%}
+<body background="{%static 'imgs/back.jpeg'%}" style="background-size: 100%;"></body>
+    {% if user.is_staff %}
+          <div class="col-lg-6 offset-md-3" style="margin-top:6em">
+              <div class="card card-body">
+                <form method="POST" enctype="multipart/form-data">
+                  {%csrf_token%}
+                  {{form.as_p}}
+                  <input type="submit" value="Submit"> 
+                </form>
+              </div>
+          </div>
+    {% else %}
+    <div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-11">
+                    <p style="margin-top:7.4em;margin-left:15em;font-size: 40px;font-weight: bolder;">Negotiation comes from your heart</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background-image:repeating-linear-gradient(to left, rgb(136, 135, 135),rgb(252, 234, 174));height: 500px;">
+    <div class="container">
+        <div class="row">
+             <div class="col-md-3 card" style="margin-top: 4%; background-color:black;height: 50px;">
+                <div class="titl" style=" color: rgb(255, 248, 220);font-size: larger;">E-commerce</div>
+             </div>
+             
+        </div>
+        <div class="row" style="margin-bottom: 70px;">     
+             <div class="col-md-3 card" style="background-color:rgb(255, 248, 220)" >
+                <p></p>
+                <p>E-commerce (electronic commerce) is the buying and selling of goods and services, or the transmitting of funds or data, over an electronic network, primarily the internet. These business transactions occur either as business-to-business (B2B), business-to-consumer (B2C), consumer-to-consumer or consumer-to-business.</p>
+             </div>
+             <div class="col" style="margin-left: 30em;margin-top: 2em;">
+                <a class="btn btn-outline-dark " href="{% url 'products' %}" style="font-family: cursive;cursor: pointer;font-size: 20px;"><i class="fa fa-compass"></i>&nbsp;Explore</a>
+            </div>
+        </div>
+       </div>
+    </div>
+    {% endif %} 
+</body>
+{%endblock%}

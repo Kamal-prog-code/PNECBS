@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Log-in{% endblock %}
+<head>
+</head>
+<body>
+
+{% block content %}
+<div style="background-image:repeating-linear-gradient(to left, rgb(248, 185, 185),rgb(188, 188, 221)); height: 800px;">
+<div class = "container" > <br>
+    <div class="card col-md-4 offset-md-2" style="height: 500px;margin-left: 380px;margin-top: 3em;">
+        <h1 class="title" style="margin-top: 1em;margin-bottom: 1em;">Log-in</h1><br>
+      
+        <form  method="post">
+            
+            {% csrf_token %}
+            Username<input type="text" name="username" placeholder="username"><br><br>
+            Password<input type="password" name="password" placeholder="password"><br><br>
+            <p><input type="submit" value="Log-in"></p>
+            <a href="{%url 'signup'%}" style="text-align: start;">New to PNECBS?</a>
+
+        </form>
+    </div>  
+    
+</div>
+</div>
+{% endblock %}  
