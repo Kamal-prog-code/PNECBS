@@ -7,7 +7,7 @@ from selenium.webdriver.common.keys import Keys
 class capstone(unittest.TestCase):
 
     def __init__(self):
-        self.driver = webdriver.Chrome("/home/kamal/Desktop/chromedriver")
+        self.driver = webdriver.Chrome("chromedriver")
 
     def test_url(self):
         self.driver.get("http://127.0.0.1:8000/")
