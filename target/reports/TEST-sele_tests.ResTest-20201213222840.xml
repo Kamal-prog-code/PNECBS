@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="sele_tests.ResTest-20201213222840" tests="1" file="sele_tests.py" time="4.916" timestamp="2020-12-13T22:28:46" failures="1" errors="0" skipped="0">
+	<testcase classname="sele_tests.ResTest" name="test_should_issue_res_message" time="4.916" timestamp="2020-12-13T22:28:46">
+		<failure type="VerificationError" message="
+Wanted but not invoked:
+
+    write('Worst Results')
+
+Instead got:
+
+    write('Best Results')
+
+"><![CDATA[Traceback (most recent call last):
+  File "c:\python38-32\lib\unittest\case.py", line 60, in testPartExecutor
+    yield
+  File "c:\python38-32\lib\unittest\case.py", line 676, in run
+    self._callTestMethod(testMethod)
+  File "c:\python38-32\lib\unittest\case.py", line 633, in _callTestMethod
+    method()
+  File "c:\users\hp\desktop\cp\src\unittest\python\sele_tests.py", line 14, in test_should_issue_res_message
+    verify(out).write("Worst Results")
+  File "c:\users\hp\desktop\cp\target\venv\build\cpython-3.8.1.final.0\lib\site-packages\mockito\invocation.py", line 242, in __call__
+    self.verification.verify(self, len(matched_invocations))
+  File "c:\users\hp\desktop\cp\target\venv\build\cpython-3.8.1.final.0\lib\site-packages\mockito\verification.py", line 93, in verify
+    raise VerificationError(
+mockito.verification.VerificationError: 
+Wanted but not invoked:
+
+    write('Worst Results')
+
+Instead got:
+
+    write('Best Results')
+
+
+]]></failure>
+	</testcase>
+</testsuite>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="unittest.loader._FailedTest-20201213215843" tests="1" file="unittest/loader.py" time="0.005" timestamp="2020-12-13T21:58:43" failures="0" errors="1" skipped="0">
+	<testcase classname="unittest.loader._FailedTest" name="sele_tests" time="0.005" timestamp="2020-12-13T21:58:43">
+		<error type="ImportError" message="Failed to import test module: sele_tests
+Traceback (most recent call last):
+  File &quot;c:\python38-32\lib\unittest\loader.py&quot;, line 154, in loadTestsFromName
+    module = __import__(module_name)
+  File &quot;c:\users\hp\desktop\cp\src\unittest\python\sele_tests.py&quot;, line 1, in &lt;module&gt;
+    from mockito import mock, verify
+ModuleNotFoundError: No module named 'mockito'
+"><![CDATA[Traceback (most recent call last):
+  File "c:\python38-32\lib\unittest\case.py", line 60, in testPartExecutor
+    yield
+  File "c:\python38-32\lib\unittest\case.py", line 676, in run
+    self._callTestMethod(testMethod)
+  File "c:\python38-32\lib\unittest\case.py", line 633, in _callTestMethod
+    method()
+  File "c:\python38-32\lib\unittest\loader.py", line 34, in testFailure
+    raise self._exception
+ImportError: Failed to import test module: sele_tests
+Traceback (most recent call last):
+  File "c:\python38-32\lib\unittest\loader.py", line 154, in loadTestsFromName
+    module = __import__(module_name)
+  File "c:\users\hp\desktop\cp\src\unittest\python\sele_tests.py", line 1, in <module>
+    from mockito import mock, verify
+ModuleNotFoundError: No module named 'mockito'
+
+]]></error>
+	</testcase>
+</testsuite>

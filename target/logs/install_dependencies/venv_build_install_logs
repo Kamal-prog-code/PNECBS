@@ -1,0 +1,5 @@
+Processing c:\users\hp\appdata\local\pip\cache\wheels\eb\10\b5\004d897773516ec01065eb96df902f01b0d363fe17a0ee1a9e\mockito-1.2.2-py3-none-any.whl
+Installing collected packages: mockito
+Successfully installed mockito-1.2.2
+WARNING: You are using pip version 20.2.3; however, version 20.3.1 is available.
+You should consider upgrading via the 'c:\users\hp\desktop\cp\target\venv\build\cpython-3.8.1.final.0\scripts\python.exe -m pip install --upgrade pip' command.

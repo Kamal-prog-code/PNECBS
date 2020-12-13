@@ -1,0 +1,8 @@
+sele.py
+setup.py
+CP.egg-info/PKG-INFO
+CP.egg-info/SOURCES.txt
+CP.egg-info/dependency_links.txt
+CP.egg-info/namespace_packages.txt
+CP.egg-info/top_level.txt
+CP.egg-info/zip-safe

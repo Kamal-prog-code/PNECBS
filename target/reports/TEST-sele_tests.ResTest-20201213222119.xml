@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="sele_tests.ResTest-20201213222119" tests="1" file="sele_tests.py" time="0.005" timestamp="2020-12-13T22:21:19" failures="0" errors="1" skipped="0">
+	<testcase classname="sele_tests.ResTest" name="test_should_issue_res_message" time="0.005" timestamp="2020-12-13T22:21:19">
+		<error type="TypeError" message="getattr(): attribute name must be string"><![CDATA[Traceback (most recent call last):
+  File "c:\python38-32\lib\unittest\case.py", line 60, in testPartExecutor
+    yield
+  File "c:\python38-32\lib\unittest\case.py", line 676, in run
+    self._callTestMethod(testMethod)
+  File "c:\python38-32\lib\unittest\case.py", line 633, in _callTestMethod
+    method()
+  File "c:\users\hp\desktop\cp\src\unittest\python\sele_tests.py", line 10, in test_should_issue_res_message
+    x = Rs(out)
+  File "c:\users\hp\desktop\cp\src\main\python\sele.py", line 72, in Rs
+    c = capstone(unittest.TestCase)
+  File "c:\python38-32\lib\unittest\case.py", line 433, in __init__
+    testMethod = getattr(self, methodName)
+TypeError: getattr(): attribute name must be string
+]]></error>
+	</testcase>
+</testsuite>

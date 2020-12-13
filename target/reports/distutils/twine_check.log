@@ -1,0 +1,6 @@
+Checking c:\users\hp\desktop\cp\target\dist\cp-1.0.dev0\dist\CP-1.0.dev0-py3-none-any.whl: PASSED, with warnings
+  warning: `long_description_content_type` missing. defaulting to `text/x-rst`.
+  warning: `long_description` missing.
+Checking c:\users\hp\desktop\cp\target\dist\cp-1.0.dev0\dist\CP-1.0.dev0.tar.gz: PASSED, with warnings
+  warning: `long_description_content_type` missing. defaulting to `text/x-rst`.
+  warning: `long_description` missing.

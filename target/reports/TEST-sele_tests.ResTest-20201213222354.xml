@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="sele_tests.ResTest-20201213222354" tests="1" file="sele_tests.py" time="5.111" timestamp="2020-12-13T22:23:59" failures="0" errors="1" skipped="0">
+	<testcase classname="sele_tests.ResTest" name="test_should_issue_res_message" time="5.111" timestamp="2020-12-13T22:23:59">
+		<error type="NoSuchElementException" message="Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Sign in&quot;}
+  (Session info: chrome=87.0.4280.88)
+"><![CDATA[Traceback (most recent call last):
+  File "c:\python38-32\lib\unittest\case.py", line 60, in testPartExecutor
+    yield
+  File "c:\python38-32\lib\unittest\case.py", line 676, in run
+    self._callTestMethod(testMethod)
+  File "c:\python38-32\lib\unittest\case.py", line 633, in _callTestMethod
+    method()
+  File "c:\users\hp\desktop\cp\src\unittest\python\sele_tests.py", line 10, in test_should_issue_res_message
+    x = Rs(out)
+  File "c:\users\hp\desktop\cp\src\main\python\sele.py", line 74, in Rs
+    x.append(c.test_url(),c.test_login_correct(),c.test_product(),c.test_negotiate_button())
+  File "c:\users\hp\desktop\cp\src\main\python\sele.py", line 45, in test_product
+    self.driver.find_element_by_link_text('Sign in').click()
+  File "c:\python38-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 428, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "c:\python38-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "c:\python38-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "c:\python38-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"Sign in"}
+  (Session info: chrome=87.0.4280.88)
+
+]]></error>
+	</testcase>
+</testsuite>
