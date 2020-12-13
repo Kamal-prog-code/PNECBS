@@ -6,6 +6,22 @@ services:
         command: python3 manage.py runserver 0.0.0.0:8000 
         ports:
             - 8000:8000
+    rasa:
+        image: rasa/rasa:1.10.7-full
+        ports:
+            - 5005:5005            
+        volumes:
+            - ./:/PNECBS
+        command:
+            - run
+
+    action-server:
+        image: rasa/rasa-sdk:1.10.2
+        volumes:
+            - ./actions/:/PNECBS/
+        ports:
+            - 5055:5055   
+
     pyb:
     	build: .
         command: pyb
